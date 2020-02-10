@@ -7,7 +7,7 @@ api = twitter.Api(consumer_key='consumer_key_here',
 
 
 l = ['sinanata','workremoteus'] #list of twitter handles you would like to add to your list
-batch_size = 99
+batch_size = 99 #do not try to add more than 100 accounts at once
 
 for i in range(0, len(l), batch_size):
     api.CreateListsMember(list_id=your_list_id_here, screen_name=l[i:i+batch_size])
